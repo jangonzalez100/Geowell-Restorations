@@ -386,3 +386,165 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .footer__grid { grid-template-columns: 1fr; gap: 3rem; }
   .footer__bottom-inner { flex-direction: column; gap: 1.5rem; text-align: center; }
 }
+
+/* ============================================================
+   MOBILE OPTIMIZATION — 768px and below
+============================================================ */
+@media (max-width: 768px) {
+
+  /* ── Spacing ── */
+  .section { padding: 60px 0; }
+  .container { padding: 0 20px; }
+
+  /* ── Nav ── */
+  .nav__toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+  }
+  .nav__links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--c-white);
+    flex-direction: column;
+    padding: 1.5rem 20px;
+    gap: 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-top: 1px solid rgba(0,0,0,0.05);
+  }
+  .nav__links.is-open { display: flex; }
+  .nav__links a { padding: 0.875rem 0; border-bottom: 1px solid rgba(0,0,0,0.05); font-size: 1rem; }
+  .nav__phone { display: none; }
+
+  /* ── Buttons ── */
+  .btn { min-height: 48px; }
+
+  /* ── Hero ── */
+  .hero { padding: 100px 0 60px; min-height: auto; }
+  .hero__heading { font-size: 2.5rem; }
+  .hero__content { text-align: center; }
+  .hero__subhead { margin: 0 auto 2.5rem; font-size: 1.0625rem; }
+  .hero__ctas { flex-direction: column; gap: 0.75rem; margin-bottom: 2.5rem; }
+  .hero__ctas .btn { width: 100%; justify-content: center; }
+
+  /* ── Trust bar ── */
+  .trust-bar {
+    width: 100%;
+    border-radius: 12px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 1rem 1.25rem;
+    gap: 1.25rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .trust-bar::-webkit-scrollbar { display: none; }
+  .trust-bar__item { font-size: 0.875rem; white-space: nowrap; }
+
+  /* ── Services ── */
+  .services__grid { grid-template-columns: 1fr; }
+  .service-card__bullet { font-size: 1rem; }
+
+  /* ── Social proof ── */
+  .pull-quote__text { font-size: 1.375rem; }
+  .pull-quote__text::before { font-size: 5rem; top: -2rem; left: -1rem; }
+  .stat-list { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .stat-item { padding: 1.5rem 1rem; }
+  .stat-item__number { font-size: 2.75rem; }
+
+  /* ── Legacy ── */
+  .about-legacy__tribute p { font-size: 1rem; }
+  .about-legacy__legacy-heading { font-size: 1.375rem; }
+  .about-legacy__photo { max-width: 100%; }
+
+  /* ── About GeoWell ── */
+  .about-legacy__body { font-size: 1rem; }
+  .about-legacy__heading { font-size: 1.75rem; }
+
+  /* ── Process scrollytelling ── */
+  .process-scroll-container { height: auto !important; }
+  .process-sticky { position: relative; top: auto; height: auto; overflow-y: visible; }
+  .process__inner { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 0; }
+  .process__aside { flex-direction: column; align-items: flex-start; }
+  .process__section-heading { font-size: 2rem; margin-bottom: 1.5rem; }
+  .process__media-col { display: none; }
+  .process__content-col { height: auto; min-height: unset; }
+  .process__step-content { position: relative; width: 100%; }
+  .process__step-heading { font-size: 1.625rem; }
+  .process__step-body { font-size: 1rem; max-width: 100%; }
+  .process__step-detail { font-size: 1rem; }
+  .process__progress-bar { display: none; }
+
+  /* ── Process cards (if used) ── */
+  .process-grid { grid-template-columns: 1fr; }
+  .process-card { padding: 2rem 1.5rem; }
+  .process-card__body { font-size: 1rem; }
+  .process-card__detail { font-size: 1rem; }
+
+  /* ── Service areas ── */
+  .area-chip { font-size: 1rem; padding: 0.75rem 1.25rem; }
+
+  /* ── Reviews ── */
+  .reviews-grid { grid-template-columns: 1fr; }
+  .review-card { padding: 2rem 1.5rem; }
+  .review-card__quote p { font-size: 1rem; }
+
+  /* ── Emergency CTA ── */
+  .emergency-cta { padding: 60px 0; }
+  .emergency-cta__heading { font-size: 2.5rem; }
+  .emergency-cta__subhead { font-size: 1.125rem; }
+  .emergency-cta .btn--emergency { width: 100%; justify-content: center; }
+
+  /* ── Footer ── */
+  .site-footer { padding: 60px 0 2rem; }
+  .footer__grid { grid-template-columns: 1fr; gap: 2.5rem; margin-bottom: 3rem; }
+  .footer__bottom-inner { flex-direction: column; gap: 1rem; text-align: center; }
+  .footer__legal { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+
+  /* ── Global image safety ── */
+  img { max-width: 100%; height: auto; }
+}
+
+/* ============================================================
+   MOBILE OPTIMIZATION — 480px and below (phone)
+============================================================ */
+@media (max-width: 480px) {
+
+  .hero { padding: 88px 0 48px; }
+  .hero__heading { font-size: 2rem; }
+  .hero__subhead { font-size: 1rem; }
+
+  .section-heading { font-size: 1.875rem; }
+  .section-subhead { font-size: 1rem; }
+
+  .trust-bar { gap: 1rem; padding: 0.875rem 1rem; }
+
+  .service-card__title { font-size: 1.5rem; }
+  .service-card__desc { font-size: 1rem; }
+
+  .stat-item__number { font-size: 2.25rem; }
+  .stat-item__label { font-size: 0.8125rem; }
+
+  .about-legacy__legacy-heading { font-size: 1.25rem; }
+  .about-legacy__heading { font-size: 1.5rem; }
+
+  .process__section-heading { font-size: 1.75rem; }
+  .process__step-heading { font-size: 1.375rem; }
+
+  .emergency-cta__heading { font-size: 2rem; }
+
+  .footer__phone { font-size: 1.25rem; }
+  .footer__logo { font-size: 1.375rem; }
+  .footer__tagline { font-size: 1rem; }
+}
