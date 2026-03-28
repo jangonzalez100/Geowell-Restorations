@@ -6,7 +6,6 @@ import {
   FiStar,
   FiMapPin,
   FiArrowUpRight,
-  FiShield,
 } from 'react-icons/fi'
 import Hero from './components/Hero'
 import Services from './components/Services'
@@ -75,6 +74,79 @@ function SocialProof() {
             ))}
           </ul>
         </div>
+      </div>
+    </section>
+  )
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   LEGACY TRIBUTE
+───────────────────────────────────────────────────────────────── */
+function Legacy() {
+  return (
+    <section className="legacy section" aria-labelledby="legacy-heading">
+      <div className="container legacy__inner">
+        <motion.div
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <p className="about-legacy__eyebrow">Our Legacy</p>
+          <h2 className="about-legacy__legacy-heading" id="legacy-heading">
+            Cliff Boutwell, USMC / US Army<br />
+            <span className="about-legacy__dates">11/13/73 &ndash; 11/23/16</span>
+          </h2>
+
+          <div className="about-legacy__photo-wrap">
+            <img
+              src="https://res.cloudinary.com/dzaz02jrd/image/upload/v1774664435/cr_w_2480_h_1240_rolcf5.webp"
+              alt="Cliff Boutwell"
+              className="about-legacy__photo"
+            />
+          </div>
+
+          <div className="about-legacy__tribute">
+            <p>Cliff Boutwell a real American Hero! He served his Country all his life. From being in the Marines and then serving in the Army National Guard.</p>
+            <p>Boutwell was a true friend! We did bootcamp together, Marine Combat Training, our MOS (Electro Maintenance Weapons Tech) together and then later served at the same base: Camp Lejuene, NC. where we saw each other often.</p>
+            <p>Totally different backgrounds but that didn&rsquo;t matter. We stayed in touch over the years with the use of email, myspace and eventually facebook. Talked on the phone and even attempted to meet up a few times when I visited GA.</p>
+            <p>This company is dedicated to Boutwell so all can remember. They say a person is never forgotten as long as someone speaks about them...</p>
+            <p>I&rsquo;ve been in construction after getting out of the Marines...and I decided that a company name change and philosophy change was the best way to Honor my fallen comrade. #NeverForget - We Love You.</p>
+            <p>When you look down years from now....I hope you see my son and yours running this company!!!!!!!!</p>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   ABOUT GEOWELL
+───────────────────────────────────────────────────────────────── */
+function AboutGeoWell() {
+  return (
+    <section className="about-geowell section" aria-labelledby="about-geowell-heading">
+      <div className="container about-geowell__inner">
+        <motion.div
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <p className="about-legacy__eyebrow">About GeoWell</p>
+          <h2 className="about-legacy__heading" id="about-geowell-heading">
+            We&rsquo;ve Been Doing This Since 1998.
+          </h2>
+          <p className="about-legacy__body">
+            GeoWell has been restoring homes and businesses across Central Florida
+            for over 25 years. IICRC certified, fully licensed and insured, with a
+            team that handles everything from the first call to the final
+            walkthrough — no subcontractors, no hand-offs, no gaps.
+          </p>
+          <p className="about-legacy__location">
+            Apopka, FL &middot; Serving all of Central Florida
+          </p>
+        </motion.div>
       </div>
     </section>
   )
@@ -427,6 +499,8 @@ export default function App() {
         <Hero />
         <Services />
         <SocialProof />
+        <Legacy />
+        <AboutGeoWell />
         <ProcessScrollytelling />
         <ServiceAreas />
         <Reviews />
