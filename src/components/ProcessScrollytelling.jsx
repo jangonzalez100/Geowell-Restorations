@@ -10,7 +10,7 @@ const steps = [
     Icon:    FiPhone,
     title:   'Call Us Anytime',
     heading: "We Answer When Others Don't.",
-    body:    'Our live dispatch team operates around the clock — 365 days a year. No answering services, no callbacks. A certified technician picks up, asks exactly the right questions, and has a crew moving to your address within minutes of your call.',
+    body:    'Our live dispatch team operates around the clock, 365 days a year. No answering services, no callbacks. A certified technician picks up, asks exactly the right questions, and has a crew moving to your address within minutes of your call.',
     detail:  'Response time target: under 60 minutes to your door.',
   },
   {
@@ -18,7 +18,7 @@ const steps = [
     Icon:    FiSearch,
     title:   'We Assess & Document',
     heading: 'Total Clarity Before a Single Nail Moves.',
-    body:    "Our technicians perform a thorough scope inspection, document every square foot of damage with photographic evidence, and produce a detailed estimate written to your insurer's standards. You understand exactly what's happening, and why — before we begin.",
+    body:    "Our technicians perform a thorough scope inspection, document every square foot of damage with photographic evidence, and produce a detailed estimate written to your insurer's standards. You understand exactly what's happening, and why, before we begin.",
     detail:  'IICRC-certified assessment. Insurance-ready documentation.',
   },
   {
@@ -103,7 +103,7 @@ export default function ProcessScrollytelling() {
         <div className="process-cta-wrap">
           <a href="tel:+18774369355" className="btn btn--primary btn--large">
             <FiPhone aria-hidden="true" />
-            Start the Process — Call Now
+            Start the Process: Call Now
             <FiArrowRight aria-hidden="true" />
           </a>
         </div>

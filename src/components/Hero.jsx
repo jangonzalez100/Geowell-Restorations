@@ -13,7 +13,7 @@ const trustItems = [
 ]
 
 /* ─────────────────────────────────────────────────────────────────
-   PARALLAX SHAPE — decorative background element with reduced scroll rate
+   PARALLAX SHAPE - decorative background element with reduced scroll rate
 ───────────────────────────────────────────────────────────────── */
 function ParallaxShape({ className, yRange }) {
   const { scrollY } = useScroll()

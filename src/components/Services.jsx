@@ -24,7 +24,7 @@ const services = [
     Icon:     FiDroplet,
     title:    'Water Damage',
     tagline:  'Every minute counts.',
-    desc:     'Burst pipes, appliance failures, and structural flooding require immediate action. Our IICRC-certified technicians extract standing water, deploy industrial drying arrays, and monitor moisture levels until your property is structurally dry — eliminating the window for mold colonization.',
+    desc:     'Burst pipes, appliance failures, and structural flooding require immediate action. Our IICRC-certified technicians extract standing water, deploy industrial drying arrays, and monitor moisture levels until your property is structurally dry, eliminating the window for mold colonization.',
     bullets:  ['Emergency extraction', 'Structural drying', 'Mold prevention protocol'],
   },
   {
@@ -32,7 +32,7 @@ const services = [
     Icon:    FiZap,
     title:   'Fire & Smoke',
     tagline: 'Damage beyond what you can see.',
-    desc:    'Smoke infiltrates wall cavities, ductwork, and materials far beyond the burn zone. We eliminate odor at the molecular level — not with masking agents — and rebuild to pre-loss condition.',
+    desc:    'Smoke infiltrates wall cavities, ductwork, and materials far beyond the burn zone. We eliminate odor at the molecular level, not with masking agents, and rebuild to pre-loss condition.',
     bullets: ['Board-up & securing', 'Soot & odor elimination', 'Full structural rebuild'],
   },
   {
@@ -147,7 +147,7 @@ export default function Services() {
             We Restore What Others Write Off
           </h2>
           <p className="section-subhead">
-            Full-service damage restoration — from the emergency call through the
+            Full-service damage restoration: from the emergency call through the
             final walkthrough. One company. Complete accountability.
           </p>
         </motion.header>

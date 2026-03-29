@@ -37,11 +37,11 @@ const affiliations = [
 ]
 
 const credentials = [
-  'State of Florida Licensed Certified General Contractor — CGC1526376',
-  'State of Florida Licensed Home Inspector — HI6912',
-  'Federal EPA Certified Lead Firm — #NAT-F252311-1',
-  'IICRC Certified Firm — #56237072',
-  '12 Active IICRC Certifications — ASD · WRT · TCST · FRST · AMRT · AMRS · OCT · HST · CCT · JCT',
+  'State of Florida Licensed Certified General Contractor | CGC1526376',
+  'State of Florida Licensed Home Inspector | HI6912',
+  'Federal EPA Certified Lead Firm | #NAT-F252311-1',
+  'IICRC Certified Firm | #56237072',
+  '12 Active IICRC Certifications | ASD · WRT · TCST · FRST · AMRT · AMRS · OCT · HST · CCT · JCT',
   '26+ Years Experience',
 ]
 
@@ -74,7 +74,7 @@ function WhyGeoWell() {
             <p className="why-geowell__body">
               Most restoration companies are unlicensed crews. Brandelle George holds 12 active
               IICRC certifications, a Florida General Contractor license, and spent years as a
-              City of Orlando Inspector. When GeoWell shows up — you know exactly who you&rsquo;re getting.
+              City of Orlando Inspector. When GeoWell shows up, you know exactly who you&rsquo;re getting.
             </p>
           </motion.div>
         </div>
@@ -88,17 +88,17 @@ function WhyGeoWell() {
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}
         >
           {credentials.map((c) => {
-            const hasDash = c.includes(' — ')
+            const hasPipe = c.includes(' | ')
             const isAbbrev = c.includes(' · ')
             
             return (
               <motion.li key={c} className="why-geowell__spec-item" variants={fadeUp}>
                 <FiCheckCircle className="spec-icon" aria-hidden="true" />
                 <div className="spec-content">
-                  {hasDash ? (
+                  {hasPipe ? (
                     <>
-                      <strong className="spec-title">{c.split(' — ')[0]}</strong>
-                      <span className="spec-badge">{c.split(' — ')[1]}</span>
+                      <strong className="spec-title">{c.split(' | ')[0]}</strong>
+                      <span className="spec-badge">{c.split(' | ')[1]}</span>
                     </>
                   ) : isAbbrev ? (
                     <strong className="spec-title spec-abbrev">{c}</strong>
@@ -183,7 +183,7 @@ function InsuranceCallout() {
             whileTap={{ scale: 0.97 }}
           >
             <FiPhone aria-hidden="true" />
-            Call Before You Call Your Insurance — (877) 436-9355
+            Call Before You Call Your Insurance: (877) 436-9355
           </motion.a>
         </motion.div>
       </div>
@@ -207,16 +207,16 @@ function IndustrySpecialists() {
         >
           <p className="industry__eyebrow">For Industry Professionals</p>
           <h2 className="industry__heading" id="industry-heading">
-            GCs, Property Managers, Realtors &amp; Plumbers — We Work With You.
+            GCs, Property Managers, Realtors &amp; Plumbers: We Work With You.
           </h2>
           <p className="industry__body">
             GeoWell offers discounted pricing for industry professionals. Whether you manage
             multifamily properties, work in real estate, or run a plumbing or contracting
-            operation — we understand your world. No inflated claims, no slow turnarounds.
+            operation, we understand your world. No inflated claims, no slow turnarounds.
             Just fast, professional restoration at rates that work for your business.
           </p>
           <p className="industry__contact">
-            Text or call us directly —{' '}
+            Text or call us directly:{' '}
             <a href="tel:+14075758055">(407) 575-8055</a>
           </p>
         </motion.div>
@@ -430,7 +430,7 @@ function ServiceAreas() {
 
         <p className="areas-note">
           Don&rsquo;t see your city?{' '}
-          <a href="tel:+18774369355">Call us</a> — if it&rsquo;s in Central Florida, we&rsquo;re already on our way.
+          Call us. If it&rsquo;s in Central Florida, we&rsquo;re already on our way.
         </p>
       </div>
     </section>
@@ -445,7 +445,7 @@ const reviews = [
     initials: 'CL',
     name:     'CWO3 Chris L., USMC',
     location: '',
-    body:     "Brandelle is trustworthy, honest, and bent on doing excellent work. Stop looking — you found what you were looking for.",
+    body:     "Brandelle is trustworthy, honest, and bent on doing excellent work. Stop looking! You found what you were looking for.",
   },
   {
     initials: 'JH',
@@ -457,7 +457,7 @@ const reviews = [
     initials: 'MM',
     name:     'Michelle M.',
     location: '',
-    body:     "Prompt, courteous, thorough and efficient — they took a lot of the stress out of mitigating the damage to our home after a storm. Highly recommend.",
+    body:     "Prompt, courteous, thorough and efficient. They took a lot of the stress out of mitigating the damage to our home after a storm. Highly recommend.",
   },
 ]
 
@@ -634,7 +634,7 @@ function Footer() {
       <div className="footer__community">
         <div className="container footer__community-inner">
           <p className="footer__community-text">
-            <em>Proud to serve the Apopka community — Shop with a Cop &middot; CF4CF &middot; Apopka K-9 Unit &middot; Winter Park HS Athletics</em>
+            <em>Proud to serve the Apopka community: Shop with a Cop &middot; CF4CF &middot; Apopka K-9 Unit &middot; Winter Park HS Athletics</em>
           </p>
           <a href="#" className="footer__community-link">See our community involvement &rarr;</a>
         </div>
