@@ -26,8 +26,6 @@ const services = [
     tagline:  'Every minute counts.',
     desc:     'Burst pipes, appliance failures, and structural flooding require immediate action. Our IICRC-certified technicians extract standing water, deploy industrial drying arrays, and monitor moisture levels until your property is structurally dry — eliminating the window for mold colonization.',
     bullets:  ['Emergency extraction', 'Structural drying', 'Mold prevention protocol'],
-    span:     2,
-    featured: true,
   },
   {
     id:      'fire',
@@ -36,7 +34,6 @@ const services = [
     tagline: 'Damage beyond what you can see.',
     desc:    'Smoke infiltrates wall cavities, ductwork, and materials far beyond the burn zone. We eliminate odor at the molecular level — not with masking agents — and rebuild to pre-loss condition.',
     bullets: ['Board-up & securing', 'Soot & odor elimination', 'Full structural rebuild'],
-    span:    1,
   },
   {
     id:      'storm',
@@ -45,7 +42,6 @@ const services = [
     tagline: 'Deployed before the adjuster arrives.',
     desc:    'Hurricane, hail, and wind damage require immediate securing and documentation. We tarp and stabilize within hours, then handle every phase from debris removal through final reconstruction.',
     bullets: ['Emergency tarping', 'Insurance documentation', 'Tree removal coordination'],
-    span:    1,
   },
   {
     id:      'commercial',
@@ -54,7 +50,6 @@ const services = [
     tagline: 'Downtime is revenue. We minimize both.',
     desc:    "Multi-unit, retail, office, and warehouse properties require a different level of coordination. We assign a dedicated project manager, work in phases around your operations, and deliver a documented scope so your insurer can't dispute the numbers.",
     bullets: ['Dedicated project manager', 'Phased restoration', 'Full insurance coordination'],
-    span:    2,
   },
 ]
 
@@ -80,12 +75,11 @@ const cardVariants = {
    SERVICE CARD
 ───────────────────────────────────────────────────────────────── */
 function ServiceCard({ service, index }) {
-  const { Icon, title, tagline, desc, bullets, span, featured, id } = service
+  const { Icon, title, tagline, desc, bullets, id } = service
 
   return (
     <motion.article
-      className={`service-card service-card--${id}${featured ? ' service-card--featured' : ''}`}
-      style={{ '--col-span': span }}
+      className={`service-card service-card--${id}`}
       custom={index}
       variants={cardVariants}
       initial="hidden"

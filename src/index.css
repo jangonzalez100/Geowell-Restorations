@@ -208,6 +208,152 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 /* ============================================================
+   WHY GEOWELL
+============================================================ */
+.why-geowell { background: #e8f0fe; color: #0a1628; padding: 8rem 0; position: relative; overflow: hidden; }
+.why-geowell::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(26,86,219,0.08) 2px, transparent 2px);
+  background-size: 30px 30px; pointer-events: none; z-index: 0;
+}
+.why-geowell > .container { position: relative; z-index: 2; }
+
+.why-geowell__top { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 5rem; }
+.why-geowell__eyebrow { font-size: 0.8125rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: var(--c-blue); margin-bottom: 1rem; margin-top: 0; }
+.why-geowell__heading { font-size: clamp(2rem, 3.5vw, 3rem); font-family: var(--font-display); font-weight: 900; color: #0a1628; margin-bottom: 0; line-height: 1.15; }
+.why-geowell__body-wrapper { padding-left: 2.5rem; border-left: 4px solid var(--c-blue); }
+.why-geowell__body { font-size: 1.125rem; color: #0a1628; line-height: 1.8; margin: 0; }
+
+.why-geowell__specs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem 5rem; margin-bottom: 5rem; }
+.why-geowell__spec-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  border-bottom: 1px solid rgba(26,86,219,0.2);
+  padding-bottom: 2.5rem;
+}
+.spec-icon { font-size: 1.75rem; color: var(--c-blue); flex-shrink: 0; margin-top: 0.125rem; }
+
+.spec-content { display: flex; flex-direction: column; gap: 0.5rem; }
+.spec-title { font-family: var(--font-display); font-size: 1.375rem; color: #0a1628; font-weight: 700; line-height: 1.3; }
+.spec-abbrev { letter-spacing: 0.05em; color: var(--c-blue); font-size: 1.125rem; font-family: var(--font-body); }
+.spec-badge {
+  display: block; font-size: 0.875rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em; color: var(--c-blue); opacity: 0.9;
+}
+
+.why-geowell__divider { border: none; border-top: 1px solid rgba(26,86,219,0.15); margin: 0 0 2.5rem; }
+.why-geowell__affil-label { display: block; font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #1a56db; margin-bottom: 2rem; text-align: center; }
+.why-geowell__affil-list { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2rem; }
+.why-geowell__affil-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  background: var(--c-white);
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.affil-logo { max-height: 56px; max-width: 160px; width: auto; display: block; object-fit: contain; transition: opacity 0.2s ease; }
+
+@media (max-width: 900px) {
+  .why-geowell__top { grid-template-columns: 1fr; gap: 3rem; align-items: start; margin-bottom: 4rem; }
+  .why-geowell__body-wrapper { padding-left: 1.5rem; border-width: 3px; }
+}
+@media (max-width: 768px) {
+  .why-geowell__specs { grid-template-columns: 1fr; gap: 2rem; margin-bottom: 4rem; }
+  .why-geowell__spec-item { padding-bottom: 2rem; gap: 1rem; }
+  .why-geowell__affil-list { gap: 1rem; }
+  .affil-logo { max-height: 40px; max-width: 120px; }
+}
+
+/* ============================================================
+   INSURANCE CALLOUT
+============================================================ */
+.insurance-callout { background: #0a1628; padding: 6rem 0; }
+.insurance-callout__inner { max-width: 860px; margin: 0 auto; }
+.insurance-callout__text { text-align: center; }
+.insurance-callout__heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-family: var(--font-display);
+  font-weight: 900;
+  color: var(--c-white);
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+}
+.insurance-callout__body {
+  font-size: 1.125rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.8;
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+}
+.btn--insurance {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.125rem 2.25rem;
+  background: var(--c-blue);
+  color: var(--c-white);
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-out);
+  box-shadow: 0 10px 30px rgba(26,86,219,0.35);
+  text-decoration: none;
+}
+.btn--insurance:hover { background: #1545b3; transform: translateY(-2px); box-shadow: 0 14px 35px rgba(26,86,219,0.45); }
+
+@media (max-width: 768px) {
+  .insurance-callout { padding: 60px 0; }
+  .insurance-callout__body { font-size: 1rem; }
+  .btn--insurance { width: 100%; justify-content: center; font-size: 1rem; padding: 1rem 1.5rem; text-align: center; }
+}
+
+/* ============================================================
+   INDUSTRY SPECIALISTS
+============================================================ */
+.industry.section { background: var(--c-white); padding: 4rem 0 5rem; }
+.industry__inner {
+  max-width: 860px;
+  margin: 0 auto;
+  border-left: 8px solid var(--c-blue);
+  padding: 4rem 4.5rem;
+  background: var(--c-light-blue);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+  border-radius: 0 24px 24px 0;
+  position: relative;
+  overflow: hidden;
+}
+.industry__inner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(26, 86, 219, 0.08) 2px, transparent 2px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 0;
+}
+.industry__eyebrow, .industry__heading, .industry__body, .industry__contact {
+  position: relative;
+  z-index: 1;
+}
+.industry__eyebrow { font-size: 0.8125rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: var(--c-blue); margin-bottom: 1rem; margin-top: 0; }
+.industry__heading { font-size: clamp(1.625rem, 3.5vw, 2.5rem); font-family: var(--font-display); font-weight: 900; color: var(--c-navy); margin-bottom: 1.5rem; line-height: 1.15; max-width: 700px; }
+.industry__body { font-size: 1.125rem; color: var(--c-text); line-height: 1.8; margin-bottom: 1.5rem; max-width: 680px; }
+.industry__contact { font-size: 1.0625rem; font-weight: 600; color: var(--c-navy); margin: 0; }
+.industry__contact a { color: var(--c-blue); text-decoration: underline; text-underline-offset: 3px; font-weight: 700; }
+.industry__contact a:hover { color: var(--c-navy); }
+
+@media (max-width: 768px) {
+  .industry__inner { padding: 3rem 2rem; border-radius: 0 16px 16px 0; margin: 0 1rem; }
+  .industry__body { font-size: 1rem; }
+}
+
+/* ============================================================
    SOCIAL PROOF (Light Blue Theme)
 ============================================================ */
 .social-proof { background: var(--c-light-blue); padding-bottom: 8rem; }
@@ -222,6 +368,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .stat-item { padding: 3rem 2rem; background: var(--c-white); border-radius: 20px; text-align: center; box-shadow: 0 4px 30px rgba(0,0,0,0.03); }
 .stat-item__number { display: block; font-size: clamp(3rem, 5vw, 4rem); font-family: var(--font-display); font-weight: 900; color: var(--c-blue); line-height: 1; margin-bottom: 0.5rem; }
 .stat-item__label { font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; color: var(--c-navy); }
+
+.social-proof__about-line { margin-top: 3rem; font-size: 1rem; color: var(--c-text); text-align: center; max-width: 680px; margin-left: auto; margin-right: auto; line-height: 1.7; }
 
 @media (max-width: 900px) { .social-proof__inner { grid-template-columns: 1fr; gap: 4rem; } }
 
@@ -334,11 +482,20 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .areas-note a { color: var(--c-blue); font-weight: 600; text-decoration: underline; }
 
 /* ============================================================
-   REVIEWS
+   CLIENTS SAY (stats + reviews unified)
 ============================================================ */
-.reviews { background: var(--c-light-blue); }
-.reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; }
-.review-card { padding: 3rem; background: var(--c-white); border-radius: 24px; box-shadow: 0 4px 25px rgba(0,0,0,0.03); position: relative; transition: transform 0.3s; }
+.clients-say { background: var(--c-light-blue); }
+.clients-say__stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; list-style: none; margin: 0 0 5rem; padding: 0; }
+.clients-say__stat { background: var(--c-white); border-radius: 20px; padding: 3rem 2rem; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+.clients-say__stat-number { display: block; font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: var(--c-blue); letter-spacing: -0.03em; line-height: 1; margin-bottom: 0.5rem; }
+.clients-say__stat-label { display: block; font-size: 1rem; font-weight: 600; color: var(--c-text); text-transform: uppercase; letter-spacing: 0.08em; }
+.clients-say__reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; list-style: none; margin: 0; padding: 0; }
+.clients-say__footer-link { text-align: center; margin-top: 4rem; font-size: 1rem; margin-bottom: 0; }
+.clients-say__footer-link a { color: var(--c-blue); font-weight: 700; display: inline-flex; align-items: center; gap: 0.25rem; }
+
+/* review card (shared) */
+.clients-say__reviews .review-card,
+.review-card { padding: 3rem; background: var(--c-white); border-radius: 24px; box-shadow: 0 4px 25px rgba(0,0,0,0.03); position: relative; transition: transform 0.3s; list-style: none; }
 .review-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
 .review-card__stars { color: #facc15; font-size: 1.25rem; display: flex; gap: 0.25rem; margin-bottom: 1.5rem; }
 .review-card__quote { margin: 0; }
@@ -376,6 +533,12 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .footer__contact p { margin-bottom: 1rem; }
 .footer__contact a { color: var(--c-navy); font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: 0.3s; }
 .footer__contact a:hover { color: var(--c-blue); }
+.footer__community { border-top: 1px solid rgba(5,16,26,0.08); padding: 1.25rem 0; }
+.footer__community-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.footer__community-text { font-size: 0.875rem; color: var(--c-text); margin: 0; font-style: italic; }
+.footer__community-link { font-size: 0.875rem; font-weight: 600; color: var(--c-blue); white-space: nowrap; }
+.footer__community-link:hover { color: var(--c-navy); }
+
 .footer__bottom-inner { display: flex; justify-content: space-between; align-items: center; padding-top: 3rem; border-top: 1px solid rgba(5,16,26,0.1); }
 .footer__copy { color: var(--c-text); margin: 0; font-size: 0.9rem; }
 .footer__legal { display: flex; gap: 2rem; }
@@ -495,8 +658,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   /* ── Service areas ── */
   .area-chip { font-size: 1rem; padding: 0.75rem 1.25rem; }
 
-  /* ── Reviews ── */
-  .reviews-grid { grid-template-columns: 1fr; }
+  /* ── Clients Say ── */
+  .clients-say__stats { grid-template-columns: 1fr; gap: 1.25rem; margin-bottom: 3rem; }
+  .clients-say__reviews { grid-template-columns: 1fr; gap: 1.5rem; }
   .review-card { padding: 2rem 1.5rem; }
   .review-card__quote p { font-size: 1rem; }
 
