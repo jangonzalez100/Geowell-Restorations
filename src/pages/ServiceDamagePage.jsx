@@ -34,6 +34,7 @@ export default function ServiceDamagePage() {
   const relationshipLine = relatedTitles.length
     ? `${damage.title} frequently overlaps with ${relatedTitles.join(', ')} in the same loss event, so scoping and sequencing matter.`
     : `${damage.title} often intersects with other restoration scopes, so coordinated planning helps avoid repeated work.`
+  const extendedIntro = `${damage.summary} Our team builds a clear recovery plan around containment, documentation, and restoration sequencing so you know exactly what to expect at each stage.`
 
   return (
     <section className="section service-damage-page" aria-labelledby="service-damage-heading">
@@ -41,7 +42,10 @@ export default function ServiceDamagePage() {
         <header className="service-damage-page__header">
           <p className="section-eyebrow">Subcategory Service</p>
           <h1 className="section-heading" id="service-damage-heading">{damage.title}</h1>
-          <p className="section-subhead">{damage.summary} We focus on practical recovery steps, not generic checklists, so you know what happens next and why.</p>
+          <p className="section-subhead">{extendedIntro}</p>
+          <p className="service-damage-page__hero-note">
+            Every property loss is different, but the objective is the same: stabilize quickly, prevent secondary damage, and restore your home or building with a scope that makes sense to you and your insurer.
+          </p>
         </header>
 
         <div className="service-damage-page__content">
@@ -63,12 +67,15 @@ export default function ServiceDamagePage() {
           </section>
 
           <section className="service-damage-page__panel">
-            <h2>Why this page matters</h2>
+            <h2>What to expect next</h2>
             {detailParagraphs.map((paragraph, idx) => (
               <p key={`${damage.slug}-detail-${idx}`} className="service-damage-page__body">
                 {paragraph}
               </p>
             ))}
+            <p className="service-damage-page__body">
+              {relationshipLine}
+            </p>
           </section>
         </div>
 

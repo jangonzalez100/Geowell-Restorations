@@ -823,6 +823,14 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   grid-column: 1 / -1;
 }
 
+.service-damage-page__hero-note {
+  max-width: 980px;
+  margin: 0.85rem 0 0;
+  color: var(--c-text);
+  font-size: 1.04rem;
+  line-height: 1.7;
+}
+
 .service-damage-page__content {
   display: flex;
   flex-direction: column;
