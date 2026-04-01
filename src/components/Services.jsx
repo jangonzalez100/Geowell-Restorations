@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import {
   FiDroplet,
   FiZap,
@@ -21,6 +22,7 @@ import {
 const services = [
   {
     id:       'water',
+    route:    '/services/water-damage',
     Icon:     FiDroplet,
     title:    'Water Damage',
     tagline:  'Every minute counts.',
@@ -29,6 +31,7 @@ const services = [
   },
   {
     id:      'fire',
+    route:   '/services/fire-damage',
     Icon:    FiZap,
     title:   'Fire & Smoke',
     tagline: 'Damage beyond what you can see.',
@@ -37,6 +40,7 @@ const services = [
   },
   {
     id:      'storm',
+    route:   '/services/storm-damage',
     Icon:    FiCloud,
     title:   'Storm Damage',
     tagline: 'Deployed before the adjuster arrives.',
@@ -45,6 +49,7 @@ const services = [
   },
   {
     id:      'commercial',
+    route:   '/services/commercial',
     Icon:    FiBriefcase,
     title:   'Commercial',
     tagline: 'Downtime is revenue. We minimize both.',
@@ -75,7 +80,7 @@ const cardVariants = {
    SERVICE CARD
 ───────────────────────────────────────────────────────────────── */
 function ServiceCard({ service, index }) {
-  const { Icon, title, tagline, desc, bullets, id } = service
+  const { Icon, title, tagline, desc, bullets, id, route } = service
 
   return (
     <motion.article
@@ -112,14 +117,13 @@ function ServiceCard({ service, index }) {
           ))}
         </ul>
 
-        <motion.a
-          href="#contact"
+        <Link
+          to={route}
           className="btn btn--ghost service-card__cta"
-          whileHover={{ x: 4, transition: { duration: 0.2 } }}
         >
-          Get emergency help
+          Explore {title}
           <FiArrowRight aria-hidden="true" />
-        </motion.a>
+        </Link>
       </div>
     </motion.article>
   )
