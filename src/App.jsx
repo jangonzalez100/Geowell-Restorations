@@ -12,6 +12,8 @@ import Hero from './components/Hero'
 import Services from './components/Services'
 import ProcessScrollytelling from './components/ProcessScrollytelling'
 
+const SITE_LOGO_URL = 'https://res.cloudinary.com/dzaz02jrd/image/upload/q_auto/f_auto/v1775046410/Gemini_Generated_Image_g4lfslg4lfslg4lf-Photoroom_l5eovw.webp'
+
 /* ─────────────────────────────────────────────────────────────────
    SHARED FADE-UP VARIANT
 ───────────────────────────────────────────────────────────────── */
@@ -534,7 +536,7 @@ function Nav() {
     >
       <nav className="nav container" aria-label="Primary navigation">
         <a href="/" className="nav__logo" aria-label="GeoWell Restorations home" onClick={closeMenu}>
-          <img src="/logo.webp" alt="GeoWell Logo" className="logo-img" />
+          <img src={SITE_LOGO_URL} alt="GeoWell Logo" className="logo-img" />
           <span className="logo-text">
             GeoWell <span className="logo-text--accent">Restorations</span>
           </span>
@@ -585,7 +587,7 @@ function Footer() {
       <div className="container footer__grid">
         <div className="footer__brand">
           <a href="/" className="footer__logo" aria-label="GeoWell Restorations home">
-            <img src="/logo.webp" alt="GeoWell Logo" className="logo-img logo-img--footer" />
+            <img src={SITE_LOGO_URL} alt="GeoWell Logo" className="logo-img logo-img--footer" />
             <span className="logo-text">
               GeoWell <span className="logo-text--accent">Restorations</span>
             </span>
